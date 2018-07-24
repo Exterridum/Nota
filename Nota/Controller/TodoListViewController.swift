@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
-    let itemArray = ["Malta", "Mexico", "Miami"]
+    var itemArray = ["Malta", "Mexico", "Miami"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,31 @@ class TodoListViewController: UITableViewController {
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add new town", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add town", style: .default) { (action) in
+            //what will hapen once
+            print("Success!")
+            if let town = textField.text {
+                self.itemArray.append(town)
+                print(self.itemArray)
+            }
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new Town"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 
