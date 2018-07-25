@@ -12,9 +12,14 @@ class TodoListViewController: UITableViewController {
 
     var itemArray = ["Malta", "Mexico", "Miami"]
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if let items = defaults.array(forKey: "TownListArray") as? [String] {
+            itemArray = items
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,6 +62,8 @@ class TodoListViewController: UITableViewController {
                 self.itemArray.append(town)
                 print(self.itemArray)
             }
+            self.defaults.set(self.itemArray, forKey: "TownListArray")
+            
             self.tableView.reloadData()
         }
         
