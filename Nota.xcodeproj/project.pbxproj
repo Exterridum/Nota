@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C162D4C211C4285008BBBEC /* MyPlaygroundDate.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlaygroundDate.playground; path = ../../../MyPlaygroundDate.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1C7587E021183BFE00E16000 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		1C7587E421198F6000E16000 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1C7587E621198FBF00E16000 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1C7587E421198F6000E16000 /* Item.swift */,
+				1C162D4C211C4285008BBBEC /* MyPlaygroundDate.playground */,
 				1C7587E621198FBF00E16000 /* Category.swift */,
 			);
 			path = "Data Model";
